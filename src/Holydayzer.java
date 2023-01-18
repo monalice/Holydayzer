@@ -22,4 +22,16 @@ public class Holydayzer {
         holidays.put("25/12/2023", "Natal");
     }
 
+    public void getHoliday(String holiday) {
+        String holidayGeted = holidays.get(holiday);
+        if(holidayGeted == null) {
+            System.out.println("This holiday does not exist!");
+            return;
+        }
+        System.out.println("This date " + holiday + " is the Brazilian holiday " + holidayGeted);
+    }
+
+    public void getAll() {
+        holidays.forEach((key, value) -> System.out.println("This date " + key + " is the Brazilian holiday " + value));
+    }
 }
